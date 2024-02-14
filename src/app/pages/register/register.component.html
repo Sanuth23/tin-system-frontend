@@ -1,61 +1,61 @@
 <div class="container col-lg-8">
     <h2 class="m-5" style="text-align: center;">TIN Registration</h2>
-    <form>
-        <div class="mb-3">
-            <label for="" class="form-label">Name with Initials</label>
-            <input type="text" class="form-control" style="width: 50%;" id="txt-name-initials"
-                aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="txt-full-name">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">NIC (without letters)</label>
-            <input type="number" class="form-control" style="width: 50%;" id="txt-nic">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="txt-date" style="width: 50%;">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Country of Birth</label>
-            <input type="text" class="form-control" id="txt-country" style="width: 50%;">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label"  style="margin-right: 30px;">Gender</label>
-            <input class="margin-left-rd" type="radio" name="gender" value="male" id="rd-male"> Male
-            <input class="margin-left-rd" type="radio" name="gender" value="female" id="rd-female"> Female
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label" style="margin-right: 30px;">Source of Income</label>
-            <input class="margin-left-rd" type="radio" name="income" value="business" id="rd-business"> Business
-            <input class="margin-left-rd" type="radio" name="income" value="employ" id="rd-employ"> Employment
-            <input class="margin-left-rd" type="radio" name="income" value="invest" id="rd-invest"> Invesment
-            <input class="margin-left-rd" type="radio" name="income" value="others" id="rd-others"> Others
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Permanent Address</label>
-            <input type="text" class="form-control" id="txt-address">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Contact Number</label>
-            <input type="number" class="form-control" id="txt-number" style="width: 50%;">
-        </div>
 
-        <div class="mb-3">
-            <label for="" class="form-label"  style="margin-right: 30px;">Civil Status</label>
-            <input class="margin-left-rd" type="radio" name="status" value="married" id="rd-married"> Married
-            <input class="margin-left-rd" type="radio" name="status" value="single" id="rd-single"> Single
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Profession</label>
-            <input type="text" class="form-control" id="txt-profession">
-        </div>
-        
-        <button type="submit" class="btn btn-primary my-3">Submit</button>
-    </form>
+    <div class="mb-3">
+        <label for="" class="form-label">Name with Initials</label>
+        <input type="text" class="form-control" [(ngModel)]="user.nameWithInitials" style="width: 50%;"
+            id="txt-name-initials" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Full Name</label>
+        <input type="text" class="form-control" [(ngModel)]="user.fullName" id="txt-full-name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">NIC (without letters)</label>
+        <input type="number" class="form-control" [(ngModel)]="user.nic" style="width: 50%;" id="txt-nic">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" [(ngModel)]="user.birthday" id="txt-date" style="width: 50%;">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Country of Birth</label>
+        <input type="text" class="form-control" [(ngModel)]="user.birthCountry" id="txt-country" style="width: 50%;">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label" style="margin-right: 30px;">Gender</label>
+        <input class="margin-left-rd" type="radio" name="gender" [(ngModel)]="user.gender" value="male" id="rd-male"> Male
+        <input class="margin-left-rd" type="radio" name="gender" [(ngModel)]="user.gender" value="female" id="rd-female"> Female
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label" style="margin-right: 30px;">Source of Income</label>
+        <input class="margin-left-rd" type="radio" name="income" value="business" [(ngModel)]="user.income" id="rd-business"> Business
+        <input class="margin-left-rd" type="radio" name="income" value="employ" [(ngModel)]="user.income" id="rd-employ"> Employment
+        <input class="margin-left-rd" type="radio" name="income" value="invest" [(ngModel)]="user.income" id="rd-invest"> Invesment
+        <input class="margin-left-rd" type="radio" name="income" value="others" [(ngModel)]="user.income" id="rd-others"> Others
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Permanent Address</label>
+        <input type="text" class="form-control" [(ngModel)]="user.address" id="txt-address">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Contact Number</label>
+        <input type="number" class="form-control" [(ngModel)]="user.contactNumber" id="txt-number" style="width: 50%;">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label" style="margin-right: 30px;">Civil Status</label>
+        <input class="margin-left-rd" type="radio" name="status" value="married" [(ngModel)]="user.civilStatus" id="rd-married"> Married
+        <input class="margin-left-rd" type="radio" name="status" value="single" [(ngModel)]="user.civilStatus" id="rd-single"> Single
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Profession</label>
+        <input type="text" class="form-control" [(ngModel)]="user.profession" id="txt-profession">
+    </div>
+
+    <button (click)="createUser()" routerLink="/tin" type="submit" class="btn btn-primary my-3">Submit</button>
+
 </div>
 
 

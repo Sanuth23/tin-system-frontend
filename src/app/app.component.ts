@@ -5,12 +5,14 @@ import { HeaderComponent } from './common/header/header.component'
 import { HomeComponent } from './pages/home/home.component'
 import { GenerateTinComponent } from './pages/generate-tin/generate-tin.component'
 import { RegisterComponent } from './pages/register/register.component'
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet,HeaderComponent,
-            HomeComponent,GenerateTinComponent,RegisterComponent],
+            HomeComponent,GenerateTinComponent,RegisterComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
